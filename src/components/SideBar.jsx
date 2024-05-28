@@ -1,7 +1,11 @@
-import { categorias } from "../data/categorias"
+import { Link } from "react-router-dom"
 import Categoria from "./Categoria"
+import useQuiosco from "../hooks/useQuiosco"
+
 
 export default function SideBar() {
+
+    const {categorias} = useQuiosco()
 
     return (
         <aside className="md:w-72">
@@ -26,6 +30,9 @@ export default function SideBar() {
                 >
                     Cancelar Orden
                 </button>
+                {/* <Link to="/auth/registro">
+                    Cancelar Orden
+                </Link> */}
             </div>
         </aside>
     )
