@@ -13,7 +13,7 @@ export default function SideBar() {
                 <img 
                     src="img/logo.svg" 
                     alt="Imagen Logo" 
-                    className="w-40"
+                    className="w-auto"
                 />
             </div>
 

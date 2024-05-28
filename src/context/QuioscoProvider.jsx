@@ -9,12 +9,22 @@ const QuioscoProvider = ({children}) => {
 
     const [categorias, setCategorias] = useState(categoriasDB)
     const [categoriaActual, setCategoriaActual] = useState(categorias[0])
+    const [modal, setModal] = useState(false)
+    const [producto, setProducto] = useState({})
 
     
     const handleClickCategoria = (id) => {
         const categoria = categorias.filter(categoria => categoria.id === id)[0]
 
         setCategoriaActual(categoria)
+    }
+
+    const handleClickModal = () => {
+        setModal(!modal)
+    }
+
+    const handleSetProducto = (producto) => {
+        setProducto(producto)
     }
 
 
@@ -24,6 +34,10 @@ const QuioscoProvider = ({children}) => {
                 categorias,
                 categoriaActual,
                 handleClickCategoria,
+                modal,
+                handleClickModal,
+                producto,
+                handleSetProducto,
             }}
         >
             {children}   
