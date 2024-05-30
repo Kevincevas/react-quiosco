@@ -5,6 +5,8 @@ import SideBar from '../components/SideBar'
 import Resumen from '../components/Resumen'
 import useQuiosco from '../hooks/useQuiosco'
 import ModalProducto from '../components/ModalProducto'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const customStyles = {
@@ -23,7 +25,7 @@ Modal.setAppElement('#root')
 
 export default function Layout() {
 
-  const {modal, handleClickModal} = useQuiosco()
+  const {modal} = useQuiosco()
   // console.log(modal)
 
   return (
@@ -43,7 +45,7 @@ export default function Layout() {
         <ModalProducto />          
       </Modal>
       
-      
+      <ToastContainer />
     </>
   )
 }
